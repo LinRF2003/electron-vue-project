@@ -1,4 +1,4 @@
 <template>
-  <div>我的第一个桌面应用</div>
+  <router-view />
 </template>
 <script setup lang="ts"></script>
