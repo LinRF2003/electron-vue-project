@@ -1,5 +1,11 @@
 import { ElMessage } from 'element-plus'
 
+/**
+ * 展示的方法
+ * @param {*} msg  信息
+ * @param {*} callback  回调函数
+ * @param {*} type  类型
+ */
 const showMessage = (msg, callback, type) => {
   ElMessage({
     message: msg,
@@ -13,6 +19,9 @@ const showMessage = (msg, callback, type) => {
   })
 }
 
+/**
+ * 引入消息组件的方法，使用 message.success()
+ */
 const message = {
   error: (msg, callback) => {
     showMessage(msg, callback, 'error')
