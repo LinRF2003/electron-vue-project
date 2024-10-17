@@ -3,8 +3,12 @@
   <div>
     <h1>About Page</h1>
     <el-button type="primary" @click="showMessage">111</el-button>
+    <el-button type="primary" @click="addCounter">添加</el-button>
     <router-link to="/">Go to Home</router-link>
     {{ data }}
+
+    <!-- 直接从 store 中访问 state -->
+    <div>Current Count: {{ counter.count }}</div>
   </div>
 </template>
 
@@ -28,4 +32,19 @@ setTimeout(() => {
 const showMessage = () => {
   message.success('请求成功')
 }
+
+import { useCounterStore } from '../stores/counter'
+
+const counter = useCounterStore()
+
+const addCounter = () => {
+  // counter.count++
+  // counter.$patch({ count: counter.count + 2 })
+  counter.increment()
+}
+// counter.count++
+// // 自动补全！ ✨
+// counter.$patch({ count: counter.count + 1 })
+// // 或使用 action 代替
+// counter.increment()
 </script>
