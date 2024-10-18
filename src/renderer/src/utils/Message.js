@@ -20,6 +20,7 @@ const showMessage = (msg, callback, type) => {
 }
 
 /**
+ * import message from '@/utils/Message'
  * 引入消息组件的方法，使用 message.success()
  */
 const message = {
