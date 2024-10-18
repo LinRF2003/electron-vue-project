@@ -15,7 +15,7 @@
 <script setup>
 import { ref } from 'vue'
 import { getBlog } from '../api/homeApi'
-import message from '../utils/Message'
+import message from '@/utils/Message'
 
 const data = ref({ a: 1 })
 // 获取数据
